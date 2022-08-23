@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #FFFFFF;
+}
+
+body {
+  background-image: url(assets/image/home.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.wraper {
+  padding: 20px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  width: 100vw;
+  height: 100vh;
+}
+
+.ancient-container {
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contain {
+  margin: 0 10px;
+}
+
+.title {
+  text-align: center;
+  font-size: 32px;
+}
+
+.title-row {
+  text-align: center;
+  font-size: 16px;
+}
+
+.ancient-card {
+  width: 48%;
+  margin: 5px;
+  cursor: pointer;
+
+}
+
+.difficulty-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 150px;
+}
+
+.difficulty-button {
+  width: 135px;
+  height: 35px;
+  background-color: blueviolet;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+.deck-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 700px;
+}
+
+.deck-button {
+  width: 170px;
+  height: 35px;
+  background-color: blueviolet;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.row-wraper {
+  display: flex;
+  justify-content: space-between;
+  width: 130px;
+}
+
+.deck-rows {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 200px;
+}
+
+.row-element {
+  display: flex;
+  flex-direction: column;
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 15px;
+  text-align: center;
+  justify-content: center;
+}
+
+.green {
+  background-color: green;
+}
+
+.brown {
+  background-color: brown;
+}
+
+.blue {
+  background-color: blue;
+}
+
+
+.deck-cards {
+  width: 130px;
+  height: 190px;
+  background-size: cover;
+  background-image: url(assets/image/mythicCardBackground.png);
+  cursor: pointer;
+}
+
+.active-card {
+  width: 130px;
+  height: 190px;
+  border: 1px solid red;
+  background-size: cover;
+
+}

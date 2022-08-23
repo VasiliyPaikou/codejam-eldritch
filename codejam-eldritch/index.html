@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <title>Codejam-Eldritch</title>
+</head>
+
+<body>
+  <div class="wraper">
+    <div class="ancients contain">
+      <h2 class="ancients-title title">Ancient</h2>
+      <div class="ancient-container">
+        <img src="./assets/Ancients/Azathoth.png" alt="ancients-img" class="ancient-card" id="azathoth">
+        <img src="./assets/Ancients/Cthulthu.png" alt="ancients-img" class="ancient-card" id="cthulthu">
+        <img src="./assets/Ancients/IogSothoth.png" alt="ancients-img" class="ancient-card" id="iogSothoth">
+        <img src="./assets/Ancients/ShubNiggurath.png" alt="ancients-img" class="ancient-card" id="shubNiggurath">
+      </div>
+    </div>
+    <div class="difficulty contain">
+      <h2 class="difficulty-title title">Difficulty</h2>
+      <div class="difficulty-container">
+        <button class="difficulty-button">Low</button>
+        <button class="difficulty-button">Average</button>
+        <button class="difficulty-button">High</button>
+      </div>
+    </div>
+    <div class="deck contain">
+      <h2 class="deck-title title">Deck</h2>
+      <div class="deck-container">
+        <button class="deck-button">Shuffle the deck</button>
+        <div class="deck-rows">
+          <div class="deck-row row1">
+            <h3 class="title-row">First stage</h3>
+            <div class="row-wraper" id="firstStage">
+              <div class="row-element green"></div>
+              <div class="row-element brown"></div>
+              <div class="row-element blue"></div>
+            </div>
+          </div>
+          <div class="deck-row row2">
+            <h3 class="title-row">Second stage</h3>
+            <div class="row-wraper" id="secondStage">
+              <div class="row-element green"></div>
+              <div class="row-element brown"></div>
+              <div class="row-element blue"></div>
+            </div>
+          </div>
+          <div class="deck-row row3">
+            <h3 class="title-row">Third stage</h3>
+            <div class="row-wraper" id="thirdStage">
+              <div class="row-element green"></div>
+              <div class="row-element brown"></div>
+              <div class="row-element blue"></div>
+            </div>
+          </div>
+        </div>
+        <div class="deck-cards"></div>
+        <div class="active-card"></div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="./js/index.js"></script>
+</body>
+
+</html>
