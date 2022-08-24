@@ -27,10 +27,10 @@ let randomNum
 difficultyButton.forEach(el => {
   el.addEventListener('click', () => {
     console.log('green:', cardsCount[0], 'brown:', cardsCount[1], 'blue:', cardsCount[2]);
-    push()
+    pushOne()
   })
 })
-function push() {
+function pushOne() {
   let counter = 0
   for (let i = 0; i < deck.length; i++) {
     let min = Math.ceil(0);
@@ -45,5 +45,26 @@ let gh =[greenData[randomNum],brownData[randomNum],blueData[randomNum]]
     }
     counter = 0
   }
-console.log(deck);
+pushDeck()
+}
+let deckStage = [[], [], []]
+function pushDeck() {
+  let counter = 0
+	console.log(deck);
+	rowWraper.forEach(row => {
+
+
+
+		for (let i = 0; i < deck.length; i++) {
+			let min = Math.ceil(0);
+			let max = Math.floor(deck[i].length);
+		console.log(deck[i].length);
+	console.log(+(row.children[i].textContent));
+	}
+
+
+	+(row.children[1].textContent)
+	+(row.children[2].textContent)
+		
+	})
 }
