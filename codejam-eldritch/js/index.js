@@ -22,10 +22,11 @@ ancientCard.forEach(el => {
   })
 })
 let deck = [[], [], []]
-let deckLength = [greenData.length,brownData.length ,blueData.length]
+let deckLength = [greenData.length, brownData.length, blueData.length]
 let randomNum
 difficultyButton.forEach(el => {
   el.addEventListener('click', () => {
+    console.log('Количество по цветам');
     console.log('green:', cardsCount[0], 'brown:', cardsCount[1], 'blue:', cardsCount[2]);
     pushOne()
   })
@@ -37,7 +38,7 @@ function pushOne() {
     let max = Math.floor(deckLength[i]);
     while (counter < cardsCount[i]) {
       randomNum = Math.floor(Math.random() * (max - min)) + min;
-let gh =[greenData[randomNum],brownData[randomNum],blueData[randomNum]]
+      let gh = [greenData[randomNum], brownData[randomNum], blueData[randomNum]]
       if (deck[i].indexOf(gh[i]) === -1) {
         deck[i].push(gh[i])
         counter++
@@ -45,26 +46,64 @@ let gh =[greenData[randomNum],brownData[randomNum],blueData[randomNum]]
     }
     counter = 0
   }
-pushDeck()
+  console.log('deck');
+  console.log(deck);
+  pushDeck()
 }
 let deckStage = [[], [], []]
+let deckPushDeck = []
 function pushDeck() {
-  let counter = 0
-	console.log(deck);
-	rowWraper.forEach(row => {
-
-
-
-		for (let i = 0; i < deck.length; i++) {
-			let min = Math.ceil(0);
-			let max = Math.floor(deck[i].length);
-		console.log(deck[i].length);
-	console.log(+(row.children[i].textContent));
-	}
-
-
-	+(row.children[1].textContent)
-	+(row.children[2].textContent)
-		
-	})
+  let count = 0
+  rowWraper.forEach(row => {
+    for (let i = 0; i < 3; i++) {
+      let counter = 0
+      while (counter < +(row.children[i].textContent)) {
+        let min = Math.ceil(0);
+        let max = Math.floor(deck[i].length);
+        randomNum = Math.floor(Math.random() * (max - min)) + min;
+        deckStage[count].push(deck[i][randomNum])
+        deck[i].splice(randomNum, 1)
+        counter++
+      }
+    }
+    count++
+  })
+  for (let i = 0; i < deckStage.length; i++) {
+    console.log(deckStage[i]);
+    let rr = 0
+    let dd = deckStage[i].length
+    while (rr < dd) {
+      let min = Math.ceil(0);
+      let max = Math.floor(deckStage[i].length);
+      randomNum = Math.floor(Math.random() * (max - min)) + min;
+      deckPushDeck.push(deckStage[i][randomNum])
+      deckStage[i].splice(randomNum, 1)
+      rr++
+    }
+  }
+console.log(deckPushDeck);
 }
+const deckCards = document.querySelector('.deck-cards')
+const activeCard = document.querySelector('.active-card')
+const titleRow = document.querySelector('.title-row')
+const green = document.querySelectorAll('.green')
+const brown = document.querySelectorAll('.brown')
+const blue = document.querySelectorAll('.blue')
+let colorGroup =[green,brown,blue]
+let counter = 0
+let allColor = ['green','brown','blue']
+deckCards.addEventListener('click', () => {
+  activeCard.src = deckPushDeck[counter].img
+  allColor.forEach(el=>{
+    if (deckPushDeck[counter].color === el) {
+      let fake = 0
+      colorGroup[allColor.indexOf(el)].forEach(el =>{
+    if (el.textContent !== '0' && fake === 0) {
+      el.textContent = `${el.textContent - 1}`
+      fake +=1
+    }
+      })
+     } 
+  })
+  counter++
+})

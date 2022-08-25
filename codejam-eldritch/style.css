@@ -43,6 +43,10 @@ body {
   font-size: 16px;
 }
 
+.finish{
+	color: red;
+}  
+
 .ancient-card {
   width: 48%;
   margin: 5px;
