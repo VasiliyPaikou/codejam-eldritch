@@ -55,7 +55,9 @@ veryHard.addEventListener('click', veryHardDeck)
 
 // набор карт для очень легкого уровня сложности
 function veryEasyDeck() {
-  console.log('hahaha!!');
+	deck = [[], [], []]
+	deckStage = [[], [], []]
+	deckPushDeck = []
   let counter = 0
   for (let i = 0; i < deck.length; i++) {
     let min = Math.ceil(0);
@@ -80,9 +82,13 @@ function veryEasyDeck() {
     }
     counter = 0
   }
+  console.log(deck);
 }
 // набор карт для легкого уровня сложности
 function easyDeck() {
+	deck = [[], [], []]
+	deckStage = [[], [], []]
+	deckPushDeck = []
   console.log('normal');
   let counter = 0
   for (let i = 0; i < deck.length; i++) {
@@ -105,6 +111,9 @@ function easyDeck() {
 }
 // набор карт для нормального уровня сложности
 function normalDeck() {
+	deck = [[], [], []]
+	deckStage = [[], [], []]
+	deckPushDeck = []
   console.log('normal');
   let counter = 0
   for (let i = 0; i < deck.length; i++) {
@@ -125,6 +134,9 @@ function normalDeck() {
 }
 // набор карт для сложного уровня сложности
 function hardDeck() {
+	deck = [[], [], []]
+	deckStage = [[], [], []]
+	deckPushDeck = []
   console.log('normal');
   let counter = 0
   for (let i = 0; i < deck.length; i++) {
@@ -147,6 +159,9 @@ function hardDeck() {
 }
 // набор карт для очень сложного уровня сложности
 function veryHardDeck() {
+	deck = [[], [], []]
+	deckStage = [[], [], []]
+	deckPushDeck = []
   console.log('veryHard');
   let counter = 0
   for (let i = 0; i < deck.length; i++) {
@@ -172,6 +187,7 @@ function veryHardDeck() {
     }
     counter = 0
   }
+  console.log(deck);
 }
 let deckStage = [[], [], []]
 let deckPushDeck = []
@@ -228,6 +244,6 @@ deckCards.addEventListener('click', () => {
         }
       })
     }
-  })
+})
   counter++
 })

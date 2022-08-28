@@ -1,155 +1,173 @@
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	color: #FFFFFF;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #FFFFFF;
 }
 
 body {
-	background-image: url(assets/image/home.png);
-	background-position: center;
-	background-repeat: no-repeat;
-	overflow: hidden;
+  background-image: url(assets/image/home.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 .wraper {
-	padding: 20px;
-	margin: 0 auto;
-	display: flex;
-	justify-content: flex-start;
-	width: 100vw;
-	height: 100vh;
+  padding: 20px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
 }
 
+.contain{
+	padding: 5px;
+	border: 3px solid blueviolet;
+}
 .ancient-container {
-	max-width: 500px;
-	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .contain {
-	margin: 0 10px;
+  margin: 0 10px;
 }
 
 .title {
-	text-align: center;
-	font-size: 32px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 32px;
 }
 
 .title-row {
-	text-align: center;
-	font-size: 16px;
+  text-align: center;
+  font-size: 16px;
 }
 
 .finish {
-	color: red;
+  color: red;
 }
 
 .ancient-card {
-	width: 48%;
-	margin: 5px;
-	cursor: pointer;
+  width: 48%;
+  margin: 5px;
+  cursor: pointer;
 
 }
 
 .difficulty-container {
-	display: none;
-	flex-direction: column;
-	justify-content: space-between;
-	height: 210px;
+	margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 210px;
+  transition: 3s;
+  opacity: 0;
 }
 
 .difficulty-active {
-	display: flex;
+  opacity: 1;
 }
 
 .difficulty-button {
-	width: 135px;
-	height: 35px;
-	background-color: blueviolet;
-	border-radius: 10px;
-	font-size: 20px;
-	cursor: pointer;
+  width: 135px;
+  height: 35px;
+  background-color: blueviolet;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
 }
 
-
+.deck{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .deck-container {
-	display: none;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
-	height: 700px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 450px;
+  transition: 3s;
+  opacity: 0;
 }
 
 .deck-active {
-	display: flex;
+  opacity: 1;
 }
 
 .deck-button {
-	display: none;
-	width: 170px;
-	height: 35px;
-	background-color: blueviolet;
-	border-radius: 10px;
-	font-size: 20px;
-	cursor: pointer;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  width: 170px;
+  height: 35px;
+  background-color: blueviolet;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;  
+  transition: 3s;
+  opacity: 0;
 }
 
 .button-active {
-	display: block;
+opacity: 1;
 }
 
 .row-wraper {
-	display: flex;
-	justify-content: space-between;
-	width: 130px;
+  display: flex;
+  justify-content: space-between;
+  width: 130px;
 }
 
 .deck-rows {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 200px;
 }
 
 .row-element {
-	display: flex;
-	flex-direction: column;
-	width: 30px;
-	height: 30px;
-	border: 1px solid black;
-	border-radius: 15px;
-	text-align: center;
-	justify-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 15px;
+  text-align: center;
+  justify-content: center;
 }
 
 .green {
-	background-color: green;
+  background-color: green;
 }
 
 .brown {
-	background-color: brown;
+  background-color: brown;
 }
 
 .blue {
-	background-color: blue;
+  background-color: blue;
 }
 
 
 .deck-cards {
-	width: 130px;
-	height: 190px;
-	background-size: cover;
-	background-image: url(assets/image/mythicCardBackground.png);
-	cursor: pointer;
+  width: 130px;
+  height: 190px;
+  background-size: cover;
+  background-image: url(assets/image/mythicCardBackground.png);
+  cursor: pointer;
 }
 
 .active-card {
-	width: 130px;
-	height: 190px;
-	border: 1px solid red;
-	background-size: cover;
+  width: 130px;
+  height: 190px;
+  border: 1px solid red;
+  background-size: cover;
 
 }
